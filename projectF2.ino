@@ -41,14 +41,14 @@ void loop()
   rpm = rpm1(duration);
   rad1 = rad(rpm);
   
-  Serial.print(time);   
+  //Serial.print(time);   
   //Serial.print("\tPulse:");
   //Serial.print(duration);
   Serial.print("\t");
   //Serial.print("\t Volatge:");
   Serial.print("0");
-  Serial.print("\tPWM:");
-  Serial.print(pwm); 
+  //Serial.print("\tPWM:");
+  //Serial.print(pwm); 
   //Serial.print("\t Rad/s:");
   Serial.print("\t");
   Serial.println(rad1);
@@ -69,14 +69,14 @@ void loop()
   rpm = rpm1(duration);
   rad1 = rad(rpm);
   
-  Serial.print(time);   
+  //Serial.print(time);   
   //Serial.print("\tPulse:");
   //Serial.print(duration);
   Serial.print("\t");
   //Serial.print("\t Volatge:");
   Serial.print("2");
-  Serial.print("\tPWM:");
-  Serial.print(pwm); 
+  //Serial.print("\tPWM:");
+  //Serial.print(pwm); 
   //Serial.print("\t Rad/s:");
   Serial.print("\t");
   Serial.println(rad1);
@@ -97,14 +97,14 @@ void loop()
   rpm = rpm1(duration);
   rad1 = rad(rpm);
   
-  Serial.print(time);   
+  //Serial.print(time);   
   //Serial.print("\tPulse:");
   //Serial.print(duration);
   Serial.print("\t");
   //Serial.print("\t Volatge:");
   Serial.print("0");
-  Serial.print("\tPWM:");
-  Serial.print(pwm); 
+  //Serial.print("\tPWM:");
+  //Serial.print(pwm); 
   //Serial.print("\t Rad/s:");
   Serial.print("\t");
   Serial.println(rad1);
@@ -125,14 +125,14 @@ void loop()
   rpm = rpm1(duration);
   rad1 = rad(rpm);
   
-  Serial.print(time);   
+  //Serial.print(time);   
   //Serial.print("\tPulse:");
   //Serial.print(duration);
   Serial.print("\t");
   //Serial.print("\t Volatge:");
   Serial.print("2");
-  Serial.print("\tPWM:");
-  Serial.print(pwm); 
+  //Serial.print("\tPWM:");
+  //Serial.print(pwm); 
   //Serial.print("\t Rad/s:");
   Serial.print("\t");
   Serial.println(rad1);
@@ -153,14 +153,14 @@ void loop()
   rpm = rpm1(duration);
   rad1 = rad(rpm);
   
-  Serial.print(time);   
+  //Serial.print(time);   
   //Serial.print("\tPulse:");
   //Serial.print(duration);
   Serial.print("\t");
   //Serial.print("\t Volatge:");
   Serial.print("0");
-  Serial.print("\tPWM:");
-  Serial.print(pwm); 
+  //Serial.print("\tPWM:");
+  //Serial.print(pwm); 
   //Serial.print("\t Rad/s:");
   Serial.print("\t");
   Serial.println(rad1);
@@ -181,14 +181,14 @@ void loop()
   rpm = rpm1(duration);
   rad1 = rad(rpm);
   
-  Serial.print(time);   
+  //Serial.print(time);   
   //Serial.print("\tPulse:");
   //Serial.print(duration);
   Serial.print("\t");
   //Serial.print("\t Volatge:");
   Serial.print("2");
-  Serial.print("\tPWM:");
-  Serial.print(pwm); 
+  //Serial.print("\tPWM:");
+  //Serial.print(pwm); 
   //Serial.print("\t Rad/s:");
   Serial.print("\t");
   Serial.println(rad1);
@@ -209,14 +209,14 @@ void loop()
   rpm = rpm1(duration);
   rad1 = rad(rpm);
   
-  Serial.print(time);   
+  //Serial.print(time);   
   //Serial.print("\tPulse:");
   //Serial.print(duration);
   Serial.print("\t");
   //Serial.print("\t Volatge:");
   Serial.print("0");
-  Serial.print("\tPWM:");
-  Serial.print(pwm); 
+  //Serial.print("\tPWM:");
+  //Serial.print(pwm); 
   //Serial.print("\t Rad/s:");
   Serial.print("\t");
   Serial.println(rad1);
