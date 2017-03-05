@@ -31,8 +31,9 @@ void loop()
 
   time = millis();
 
-  for(int pwm=75;pwm<101;pwm++){
-  //pwm=100;  
+  
+  while(time<2001){
+  pwm=0;
   analogWrite(speedPinA, pwm);//Sets speed variable via PWM 
   //Serial.print("Time: ");
   
@@ -45,7 +46,7 @@ void loop()
   //Serial.print(duration);
   Serial.print("\t");
   //Serial.print("\t Volatge:");
-  Serial.print(voltage);
+  Serial.print("0");
   Serial.print("\tPWM:");
   Serial.print(pwm); 
   //Serial.print("\t Rad/s:");
@@ -59,9 +60,8 @@ void loop()
   delay(100);
   time = millis();
   }
-  
-  for(int pwm=101;pwm>74;pwm--){
-  //pwm=100;  
+    while(time<7001){
+  pwm=40;
   analogWrite(speedPinA, pwm);//Sets speed variable via PWM 
   //Serial.print("Time: ");
   
@@ -74,7 +74,119 @@ void loop()
   //Serial.print(duration);
   Serial.print("\t");
   //Serial.print("\t Volatge:");
-  Serial.print(voltage);
+  Serial.print("2");
+  Serial.print("\tPWM:");
+  Serial.print(pwm); 
+  //Serial.print("\t Rad/s:");
+  Serial.print("\t");
+  Serial.println(rad1);
+  //Serial.print("\t RPM");
+  //Serial.println(rpm,DEC);
+  
+  
+  duration = 0;
+  delay(100);
+  time = millis();
+  }
+    while(time<12001){
+  pwm=0;
+  analogWrite(speedPinA, pwm);//Sets speed variable via PWM 
+  //Serial.print("Time: ");
+  
+  voltage = volts100(pwm);
+  rpm = rpm1(duration);
+  rad1 = rad(rpm);
+  
+  Serial.print(time);   
+  //Serial.print("\tPulse:");
+  //Serial.print(duration);
+  Serial.print("\t");
+  //Serial.print("\t Volatge:");
+  Serial.print("0");
+  Serial.print("\tPWM:");
+  Serial.print(pwm); 
+  //Serial.print("\t Rad/s:");
+  Serial.print("\t");
+  Serial.println(rad1);
+  //Serial.print("\t RPM");
+  //Serial.println(rpm,DEC);
+  
+  
+  duration = 0;
+  delay(100);
+  time = millis();
+  }
+    while(time<17001){
+  pwm=40;
+  analogWrite(speedPinA, pwm);//Sets speed variable via PWM 
+  //Serial.print("Time: ");
+  
+  voltage = volts100(pwm);
+  rpm = rpm1(duration);
+  rad1 = rad(rpm);
+  
+  Serial.print(time);   
+  //Serial.print("\tPulse:");
+  //Serial.print(duration);
+  Serial.print("\t");
+  //Serial.print("\t Volatge:");
+  Serial.print("2");
+  Serial.print("\tPWM:");
+  Serial.print(pwm); 
+  //Serial.print("\t Rad/s:");
+  Serial.print("\t");
+  Serial.println(rad1);
+  //Serial.print("\t RPM");
+  //Serial.println(rpm,DEC);
+  
+  
+  duration = 0;
+  delay(100);
+  time = millis();
+  }
+    while(time<22001){
+  pwm=0;
+  analogWrite(speedPinA, pwm);//Sets speed variable via PWM 
+  //Serial.print("Time: ");
+  
+  voltage = volts100(pwm);
+  rpm = rpm1(duration);
+  rad1 = rad(rpm);
+  
+  Serial.print(time);   
+  //Serial.print("\tPulse:");
+  //Serial.print(duration);
+  Serial.print("\t");
+  //Serial.print("\t Volatge:");
+  Serial.print("0");
+  Serial.print("\tPWM:");
+  Serial.print(pwm); 
+  //Serial.print("\t Rad/s:");
+  Serial.print("\t");
+  Serial.println(rad1);
+  //Serial.print("\t RPM");
+  //Serial.println(rpm,DEC);
+  
+  
+  duration = 0;
+  delay(100);
+  time = millis();
+  }
+    while(time<27001){
+  pwm=40;
+  analogWrite(speedPinA, pwm);//Sets speed variable via PWM 
+  //Serial.print("Time: ");
+  
+  voltage = volts100(pwm);
+  rpm = rpm1(duration);
+  rad1 = rad(rpm);
+  
+  Serial.print(time);   
+  //Serial.print("\tPulse:");
+  //Serial.print(duration);
+  Serial.print("\t");
+  //Serial.print("\t Volatge:");
+  Serial.print("2");
   Serial.print("\tPWM:");
   Serial.print(pwm); 
   //Serial.print("\t Rad/s:");
@@ -88,7 +200,35 @@ void loop()
   delay(100);
   time = millis();
   }  
-  //analogWrite(speedPinA, 0);
+    while(time<29001){
+  pwm=0;
+  analogWrite(speedPinA, pwm);//Sets speed variable via PWM 
+  //Serial.print("Time: ");
+  
+  voltage = volts100(pwm);
+  rpm = rpm1(duration);
+  rad1 = rad(rpm);
+  
+  Serial.print(time);   
+  //Serial.print("\tPulse:");
+  //Serial.print(duration);
+  Serial.print("\t");
+  //Serial.print("\t Volatge:");
+  Serial.print("0");
+  Serial.print("\tPWM:");
+  Serial.print(pwm); 
+  //Serial.print("\t Rad/s:");
+  Serial.print("\t");
+  Serial.println(rad1);
+  //Serial.print("\t RPM");
+  //Serial.println(rpm,DEC);
+  
+  
+  duration = 0;
+  delay(100);
+  time = millis();
+  }
+  analogWrite(speedPinA, 0);
 }
  
 void EncoderInit()
