@@ -31,12 +31,12 @@ void loop()
 
   time = millis();
 
-  for(int pwm=50;pwm<76;pwm++){
+  for(int pwm=75;pwm<101;pwm++){
   //pwm=100;  
   analogWrite(speedPinA, pwm);//Sets speed variable via PWM 
   //Serial.print("Time: ");
   
-  voltage = volts75(pwm);
+  voltage = volts100(pwm);
   rpm = rpm1(duration);
   rad1 = rad(rpm);
   
@@ -60,12 +60,12 @@ void loop()
   time = millis();
   }
   
-  for(int pwm=76;pwm>49;pwm--){
+  for(int pwm=101;pwm>74;pwm--){
   //pwm=100;  
   analogWrite(speedPinA, pwm);//Sets speed variable via PWM 
   //Serial.print("Time: ");
   
-  voltage = volts75(pwm);
+  voltage = volts100(pwm);
   rpm = rpm1(duration);
   rad1 = rad(rpm);
   
