@@ -31,15 +31,14 @@ void loop()
 
   time = millis();
 
-  for(int pwm=100; pwm<256;pwm++){
-  //pwm=232;  
+  for(int pwm=50;pwm<76;pwm++){
+  //pwm=100;  
   analogWrite(speedPinA, pwm);//Sets speed variable via PWM 
   //Serial.print("Time: ");
   
-  voltage = volts(pwm);
+  voltage = volts75(pwm);
   rpm = rpm1(duration);
   rad1 = rad(rpm);
- 
   
   Serial.print(time);   
   //Serial.print("\tPulse:");
@@ -47,38 +46,8 @@ void loop()
   Serial.print("\t");
   //Serial.print("\t Volatge:");
   Serial.print(voltage);
-  //Serial.print("\tPWM:");
-  //Serial.print(pwm); 
-  //Serial.print("\t Rad/s:");
-  Serial.print("\t");
-  Serial.println(rad1);
-  //Serial.print("\t RPM");
-  //Serial.println(rpm,DEC);
-  
-  
-  duration = 0;
-  delay(100);
-  time = millis();
-  }
-
-  for(int pwm=255; pwm >99;pwm--){
-  //pwm=232;  
-  analogWrite(speedPinA, pwm);//Sets speed variable via PWM 
-  //Serial.print("Time: ");
-  
-  voltage = volts(pwm);
-  rpm = rpm1(duration);
-  rad1 = rad(rpm);
- 
-  
-  Serial.print(time);   
-  //Serial.print("\tPulse:");
-  //Serial.print(duration);
-  Serial.print("\t");
-  //Serial.print("\t Volatge:");
-  Serial.print(voltage);
-  //Serial.print("\tPWM:");
-  //Serial.print(pwm); 
+  Serial.print("\tPWM:");
+  Serial.print(pwm); 
   //Serial.print("\t Rad/s:");
   Serial.print("\t");
   Serial.println(rad1);
@@ -91,6 +60,34 @@ void loop()
   time = millis();
   }
   
+  for(int pwm=76;pwm>49;pwm--){
+  //pwm=100;  
+  analogWrite(speedPinA, pwm);//Sets speed variable via PWM 
+  //Serial.print("Time: ");
+  
+  voltage = volts75(pwm);
+  rpm = rpm1(duration);
+  rad1 = rad(rpm);
+  
+  Serial.print(time);   
+  //Serial.print("\tPulse:");
+  //Serial.print(duration);
+  Serial.print("\t");
+  //Serial.print("\t Volatge:");
+  Serial.print(voltage);
+  Serial.print("\tPWM:");
+  Serial.print(pwm); 
+  //Serial.print("\t Rad/s:");
+  Serial.print("\t");
+  Serial.println(rad1);
+  //Serial.print("\t RPM");
+  //Serial.println(rpm,DEC);
+  
+  
+  duration = 0;
+  delay(100);
+  time = millis();
+  }  
   //analogWrite(speedPinA, 0);
 }
  
@@ -145,6 +142,33 @@ float volts(int num1) {
    return result; 
 }
 
+float volts100(int num1) {
+
+   /* local variable declaration */
+   float result;
+   float num2;
+
+   num2=num1;
+
+   result=(num2-75)*0.06;
+   result=result+6;
+ 
+   return result; 
+}
+
+float volts75(int num1) {
+
+   /* local variable declaration */
+   float result;
+   float num2;
+
+   num2=num1;
+
+   result=(num2-50)*0.0928;
+   result=result+3.68;
+ 
+   return result; 
+}
 int pwm1(float v){
 
   int pwmr;
